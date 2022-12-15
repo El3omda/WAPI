@@ -69,6 +69,7 @@ const createSession = function(id, description) {
   const client = new Client({
     restartOnAuthFail: true,
     puppeteer: {
+      executablePath: '/usr/bin/chromium-browser',
       headless: true,
       args: [
         '--no-sandbox',
