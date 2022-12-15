@@ -196,7 +196,7 @@ app.post('/send-message', async (req, res) => {
 
   console.log(req.body)
 
-  const client = sessions.find(sess => sess.id == sender)?.client;
+  const client = sessions.find(sess => sess.id == sender).client;
 
   // Make sure the sender is exists & ready
   if (!client) {
